@@ -4,6 +4,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { UsuarioModel } from 'src/app/modelos/usuario.model';
 import { SeguridadService } from 'src/app/servicios/seguridad.service';
 import { MD5 } from 'crypto-js';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-identificacion-usuario',
@@ -15,7 +16,8 @@ export class IdentificacionUsuarioComponent {
 
   constructor(
     private fb: FormBuilder,
-    private servicioSeguridad: SeguridadService
+    private servicioSeguridad: SeguridadService,
+    private router: Router
   ) { }
 
   ngOnInit(){
@@ -39,6 +41,9 @@ export class IdentificacionUsuarioComponent {
       this.servicioSeguridad.IdentificarUsuario(usuario, claveEncriptada).subscribe({
         next: (datos: UsuarioModel) => {
           console.log(datos);
+          if(this.servicioSeguridad.AlmacenarDatosUsuarioIdentificado(datos)){
+            this.router.navigate(['/seguridad/2fa']);
+          }
         },
         error: (err) => {
           console.log(err);
