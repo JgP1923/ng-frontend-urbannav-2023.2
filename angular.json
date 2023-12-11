@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "urbannav-frontend-2023": {
+    "ng-frontend-urbannav-2023.2": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -11,11 +11,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/urbannav-frontend-2023",
+            "outputPath": "dist/ng-frontend-urbannav-2023.2",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -25,12 +25,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/materialize-css/dist/css/materialize.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/materialize-css/dist/js/materialize.js",
-              "src/assets/js/funcionesM.js"]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -49,12 +46,9 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -63,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "urbannav-frontend-2023:build:production"
+              "buildTarget": "ng-frontend-urbannav-2023.2:build:production"
             },
             "development": {
-              "browserTarget": "urbannav-frontend-2023:build:development"
+              "buildTarget": "ng-frontend-urbannav-2023.2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "urbannav-frontend-2023:build"
+            "buildTarget": "ng-frontend-urbannav-2023.2:build"
           }
         },
         "test": {
