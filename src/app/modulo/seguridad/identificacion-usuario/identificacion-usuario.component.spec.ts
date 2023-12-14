@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IdentificacionUsuarioComponent } from './identificacion-usuario.component';
+import { CommonModule } from '@angular/common';
 
 describe('IdentificacionUsuarioComponent', () => {
   let component: IdentificacionUsuarioComponent;
@@ -8,7 +9,7 @@ describe('IdentificacionUsuarioComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IdentificacionUsuarioComponent]
+      imports: [IdentificacionUsuarioComponent,]
     })
     .compileComponents();
     

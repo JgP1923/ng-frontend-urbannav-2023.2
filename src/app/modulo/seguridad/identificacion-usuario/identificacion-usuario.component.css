@@ -19,3 +19,7 @@ body{
     background-size: cover;
 }
 
+.show-errors{
+    color:red;
+}
+

@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -5,7 +6,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-identificacion-usuario',
   standalone: true,
-  imports: [RouterModule,ReactiveFormsModule],
+  imports: [RouterModule,ReactiveFormsModule,CommonModule],
   templateUrl: './identificacion-usuario.component.html',
   styleUrl: './identificacion-usuario.component.css'
 })
