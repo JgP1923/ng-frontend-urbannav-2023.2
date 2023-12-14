@@ -12,5 +12,5 @@ import { PiePaginaComponent } from './publico/pagina-maestra/pie-pagina/pie-pagi
     imports: [CommonModule, RouterOutlet, EncabezadoComponent,PiePaginaComponent]
 })
 export class AppComponent {
-  title = 'ng-frontend-urbannav-2023.2';
+  title = 'UrbanNav';
 }

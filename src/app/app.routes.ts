@@ -13,6 +13,10 @@ export const routes: Routes = [
         component: EmpresaComponent
     },
     {
+        path: "seguridad",
+        loadChildren: () => import('./modulo/seguridad/seguridad.module').then(modulo => modulo.SeguridadModule)
+    },
+    {
         path:"",
         pathMatch: "full",
         redirectTo: "/home"
