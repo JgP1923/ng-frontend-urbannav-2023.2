@@ -1,16 +1,73 @@
 .carousel-item{
-    height: 45vh;
+    height: 40vh;
     width: 35%;
-    left: 20%;
+    left: 30%;
 }
 .carousel{
     background-color: #000;
     height: 65vh;
 }
 .texto1{
-    color: #fff;
-    font-size: 2.5em;
+    color: #000;
+    font-size: 20px;
     font-weight: bold;
-    text-align: right;
-    margin-top: 1%;
+    float: right;
+    
+
 }
+.container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.responsive-video{
+    width:50%;
+    height: 60vh;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align:left;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+article {
+    margin: 0em 1.875em 1em;
+    background: white;
+    box-shadow: 15px 15px 30px #3c5d69;
+    padding: 0.938em;
+    border-radius: 0.625em;
+    
+}
+
+.icon{
+    width: 30%; /* Ajuste el ancho de las imágenes */
+    height: auto; /* Mantenga la proporción de aspecto original */
+    border-radius: 0.3125em;
+    margin-bottom: 0.625em; /* Ajuste el margen inferior de las imágenes */
+    box-shadow: 10px 10px 20px #3c5d69;
+    
+}
+
+.icon2{
+    width: 30%; /* Ajuste el ancho de las imágenes */
+    height: auto; /* Mantenga la proporción de aspecto original */
+    border-radius: 0.3125em;
+    margin-bottom: 0.625em; /* Ajuste el margen inferior de las imágenes */
+    box-shadow: 10px 10px 20px #3c5d69;
+}
+.container2{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
