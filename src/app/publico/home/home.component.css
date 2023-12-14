@@ -48,10 +48,10 @@ article {
 }
 
 .icon{
-    width: 30%; /* Ajuste el ancho de las imágenes */
-    height: auto; /* Mantenga la proporción de aspecto original */
+    width: 30%; 
+    height: auto; 
     border-radius: 0.3125em;
-    margin-bottom: 0.625em; /* Ajuste el margen inferior de las imágenes */
+    margin-bottom: 0.625em; 
     box-shadow: 10px 10px 20px #3c5d69;
     
 }
