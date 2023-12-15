@@ -1,0 +1,23 @@
+#login-page{
+    width: 500px;;
+    
+}
+
+.card{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+body{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlPZD77tE31p_Nv9LxqL9mFk9gfQyKgRNQPw&usqp=CAU');
+    background-size: cover;
+    height: 75vh; 
+    margin: 0; 
+    overflow: hidden; 
+}
