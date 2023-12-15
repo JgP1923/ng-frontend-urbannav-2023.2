@@ -1,9 +1,9 @@
 export  class UsuarioModel{
-    id?:string;
+    _id?:string;
     nombre?:string;
     apellido?:string;
     correo?:string;
-    telefoo?:string;
+    telefono?:string;
     clave?:string;
     rolId?:string;
 }

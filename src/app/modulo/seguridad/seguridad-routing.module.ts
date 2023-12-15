@@ -14,8 +14,8 @@ const routes: Routes = [
   {
     path:"cambiar-clave",
     component: CambioClaveComponent
-
   },
+
   {
     path:"recuperar-clave",
     component: RecuperarClaveComponent
@@ -27,7 +27,8 @@ const routes: Routes = [
   {
     path:"2fa",
     component:IdentificacionTwofaComponent
-  }
+  },
+  
 ];
 
 @NgModule({
