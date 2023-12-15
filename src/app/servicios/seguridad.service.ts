@@ -28,7 +28,7 @@ export class SeguridadService  {
    * Almacena los datos del usuario
    * @param datos  datos del usuario
    */
-  AlmacenarDatosUsuarioValidado(datos:UsuarioModel){
+  AlmacenarDatosUsuarioValidado(datos:UsuarioModel): boolean{
    let cadena = JSON.stringify(datos);
    let datosLs = localStorage.getItem("datos-usuario");
    if(datosLs){
