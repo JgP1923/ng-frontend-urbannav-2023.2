@@ -32,7 +32,7 @@ export class SeguridadService  {
    * Almacena los datos del usuario
    * @param datos  datos del usuario
    */
-  AlmacenarDatosUsuarioValidado(datos:UsuarioModel):boolean{
+  AlmacenarDatosUsuarioValidado(datos:UsuarioModel){
    let cadena = JSON.stringify(datos);
    let datosLs = localStorage.getItem("datos-usuario");
    if(datosLs){
@@ -69,43 +69,4 @@ export class SeguridadService  {
       codigo2fa: codigo    
     });
   }
-
-/**
- * Guarda en localstroage los datos del usuario validado
- * @param datos datos del usuario guardado
- * @returns respuesta
- */
-  AlmacenarDatosUsuarioValidadoLs(datos:UsuarioValidadoModel):boolean{
-    let datosLs = localStorage.getItem("datos-sesion");
-    if(datosLs != null){
-      return false;
-    }else{
-      let datosString = JSON.stringify(datos);
-      localStorage.setItem("datos-sesion",datosString);
-      return true;
-    }
-  }
-
-  datosUsuarioValidado = new BehaviorSubject<UsuarioValidadoModel>(new UsuarioValidadoModel());
-
-  ObtenerDatosSesion(): Observable<UsuarioValidadoModel> {
-    return this.datosUsuarioValidado.asObservable();
-  }
-
-  validacionDeSesion(): UsuarioValidadoModel | null{
-    let ls = localStorage.getItem("datos-sesion");
-    if (ls) {
-      let objUsuario = JSON.parse(ls);
-      this.ActualizarComportamientoUsuario(objUsuario);
-      return objUsuario;
-    }
-    return null
-  }
-
-  ActualizarComportamientoUsuario(datos: UsuarioValidadoModel) {
-    return this.datosUsuarioValidado.next(datos);
-  }
-
-
-  
 }
