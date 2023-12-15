@@ -3,7 +3,7 @@ export  class UsuarioModel{
     nombre?:string;
     apellido?:string;
     correo?:string;
-    telefoo?:string;
+    telefono?:string;
     clave?:string;
     rolId?:string;
 }

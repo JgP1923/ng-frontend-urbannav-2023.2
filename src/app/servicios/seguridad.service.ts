@@ -65,4 +65,15 @@ export class SeguridadService  {
       codigo2fa: codigo    
     });
   }
+
+/**
+ * 
+ * @param usuario 
+ * @returns 
+ */
+  RecuperarClavePorUsuario(usuario: string): Observable<UsuarioModel> {
+    return this.http.post<UsuarioModel>(`${this.urlBase}recuperar-clave`, {
+      correo: usuario,
+    });
+  }
 }
